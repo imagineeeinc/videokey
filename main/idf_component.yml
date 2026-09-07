@@ -1,0 +1,7 @@
+dependencies:
+  nopnop2002/st7789:
+    path: components/st7789/
+    git: https://github.com/nopnop2002/esp-idf-st7789.git
+  sd_card:
+    path: ${IDF_PATH}/examples/storage/sd_card/sdmmc/components/sd_card
+  espressif/esp_new_jpeg: ^1.0.2

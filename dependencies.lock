@@ -1,28 +1,4 @@
 dependencies:
-  espressif/esp_h264:
-    component_hash: 054a781d7280b94f3d5c29d562ed1582e4c51e7f3ff5566d5d57058e80817805
-    dependencies:
-    - name: idf
-      require: private
-      version: '>=4.4'
-    source:
-      registry_url: https://components.espressif.com
-      type: service
-    targets:
-    - esp32s3
-    - esp32s31
-    - esp32p4
-    version: 1.4.0
-  espressif/esp_image_effects:
-    component_hash: a9a9a18173dc338f94559e61ebbfc1aeff5ebb2f7703e7e3d2431c5bb3450fe6
-    dependencies:
-    - name: idf
-      require: private
-      version: '>=5.0'
-    source:
-      registry_url: https://components.espressif.com
-      type: service
-    version: 1.1.0
   espressif/esp_new_jpeg:
     component_hash: e1e7e6991193c41ed6c9fc386702aa7821433319e7aa9c3147cd3236310cd69c
     dependencies: []
@@ -41,77 +17,6 @@ dependencies:
     - esp32c6
     - esp32c61
     - esp32h4
-    version: 1.0.2
-  espressif/esp_video_codec:
-    component_hash: 4a531eadff5a79a646838cb262472c58af5231a8c161223da5bbfdf95b5b0dcc
-    dependencies:
-    - name: espressif/esp_h264
-      registry_url: https://components.espressif.com
-      require: private
-      rules:
-      - if: target in [esp32p4, esp32s3, esp32s31]
-      version: ^1.4.0
-    - name: espressif/esp_new_jpeg
-      registry_url: https://components.espressif.com
-      require: private
-      rules:
-      - if: target in [esp32, esp32s2, esp32s3, esp32p4, esp32c2, esp32c3, esp32c5, esp32c6, esp32c61, esp32h4, esp32s31]
-      version: '*'
-    - name: idf
-      require: private
-      version: '>=4.4'
-    source:
-      registry_url: https://components.espressif.com
-      type: service
-    version: 0.5.6
-  espressif/esp_video_render:
-    component_hash: 68f398eb82318d2a71da33a276375a15c033af21313c7947b940f2aa332c59e5
-    dependencies:
-    - matches:
-      - if: $CONFIG{ESP_VIDEO_RENDER_LVGL_BACKEND_SUPPORT} == True
-      name: espressif/esp_lvgl_port
-      registry_url: https://components.espressif.com
-      require: public
-      version: ~2
-    - matches:
-      - if: $CONFIG{ESP_VIDEO_RENDER_TEXT_WIDGET_SUPPORT} == True
-      name: espressif/freetype
-      registry_url: https://components.espressif.com
-      require: private
-      version: ~2.13.3
-    - name: espressif/gmf_video
-      registry_url: https://components.espressif.com
-      require: private
-      version: ~1.0
-    source:
-      registry_url: https://components.espressif.com/
-      type: service
-    version: 1.0.0~2
-  espressif/gmf_core:
-    component_hash: 03aaff3dec4d2431b752f2ca6eb5f8e831f12e748007bf3d063a6dfdeba3bf7f
-    dependencies: []
-    source:
-      registry_url: https://components.espressif.com
-      type: service
-    version: 1.0.1
-  espressif/gmf_video:
-    component_hash: 38cf27c1809f8da5cfe61db1c07d8af8557e5cc2a2a62b3d72ab3a4c85eb7b89
-    dependencies:
-    - name: espressif/esp_image_effects
-      registry_url: https://components.espressif.com
-      require: private
-      version: ~1.1.0
-    - name: espressif/esp_video_codec
-      registry_url: https://components.espressif.com
-      require: private
-      version: ~0.5
-    - name: espressif/gmf_core
-      registry_url: https://components.espressif.com
-      require: private
-      version: ~1.0
-    source:
-      registry_url: https://components.espressif.com
-      type: service
     version: 1.0.2
   idf:
     source:
@@ -133,9 +38,8 @@ dependencies:
     version: '*'
 direct_dependencies:
 - espressif/esp_new_jpeg
-- espressif/esp_video_render
 - nopnop2002/st7789
 - sd_card
-manifest_hash: 54bd79250ddddae4d8a8d91a8f0cd146e43c499982948d64eaaf6a56b49bdae1
+manifest_hash: 703207737ef0b7e7d8dd31cdfae96a8b7f8280910d9a04a7962af7068a5dbee3
 target: esp32s3
 version: 3.0.0

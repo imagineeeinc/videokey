@@ -1169,28 +1169,6 @@ CONFIG_GDMA_OBJ_DRAM_SAFE=y
 # end of ESP-Driver:GPIO Configurations
 
 #
-# ESP-Driver:I2C Configurations
-#
-# default:
-# CONFIG_I2C_ISR_IRAM_SAFE is not set
-# default:
-# CONFIG_I2C_ENABLE_DEBUG_LOG is not set
-# default:
-CONFIG_I2C_MASTER_ISR_HANDLER_IN_IRAM=y
-# end of ESP-Driver:I2C Configurations
-
-#
-# ESP-Driver:I2S Configurations
-#
-# default:
-# CONFIG_I2S_ISR_IRAM_SAFE is not set
-# default:
-# CONFIG_I2S_CTRL_FUNC_IN_IRAM is not set
-# default:
-# CONFIG_I2S_ENABLE_DEBUG_LOG is not set
-# end of ESP-Driver:I2S Configurations
-
-#
 # ESP-Driver:LEDC Configurations
 #
 # default:
@@ -1399,17 +1377,6 @@ CONFIG_ESP_SPI_BUS_LOCK_ISR_FUNCS_IN_IRAM=y
 # default:
 CONFIG_ESP_INTR_IN_IRAM=y
 # end of Hardware Settings
-
-#
-# ESP-Driver:LCD Controller Configurations
-#
-# default:
-# CONFIG_LCD_RGB_ISR_IRAM_SAFE is not set
-# default:
-# CONFIG_LCD_RGB_RESTART_IN_VSYNC is not set
-# default:
-# CONFIG_LCD_ENABLE_DEBUG_LOG is not set
-# end of ESP-Driver:LCD Controller Configurations
 
 #
 # LibC
@@ -2618,57 +2585,6 @@ CONFIG_WL_SECTOR_SIZE_4096=y
 # default:
 CONFIG_WL_SECTOR_SIZE=4096
 # end of Wear Levelling
-
-#
-# ESP H264 Configuration
-#
-# default:
-CONFIG_ESP_H264_DECODER_IRAM=y
-# default:
-# CONFIG_ESP_H264_DUAL_TASK is not set
-# end of ESP H264 Configuration
-
-#
-# Video Codec Configuration
-#
-
-#
-# Video Decoder Configuration
-#
-# default:
-CONFIG_VIDEO_DECODER_SW_H264_SUPPORT=y
-# default:
-CONFIG_VIDEO_DECODER_SW_MJPEG_SUPPORT=y
-# end of Video Decoder Configuration
-
-#
-# Video Encoder Configuration
-#
-# default:
-CONFIG_VIDEO_ENCODER_SW_H264_SUPPORT=y
-# default:
-CONFIG_VIDEO_ENCODER_SW_MJPEG_SUPPORT=y
-# end of Video Encoder Configuration
-# end of Video Codec Configuration
-
-#
-# Video Render Configuration
-#
-# default:
-# CONFIG_ESP_VIDEO_RENDER_LVGL_BACKEND_SUPPORT is not set
-# default:
-CONFIG_ESP_VIDEO_RENDER_WIDGET_SUPPORT=y
-# default:
-# CONFIG_ESP_VIDEO_RENDER_TEXT_WIDGET_SUPPORT is not set
-# default:
-CONFIG_ESP_VIDEO_RENDER_BLEND_THREAD_STACK_SIZE=20480
-# default:
-CONFIG_ESP_VIDEO_RENDER_BLEND_THREAD_CORE_ID=0
-# default:
-CONFIG_ESP_VIDEO_RENDER_BLEND_THREAD_PRIORITY=8
-# default:
-# CONFIG_VIDEO_RENDER_MEASURE_ENABLE is not set
-# end of Video Render Configuration
 # end of Component config
 
 # default:
